@@ -5,33 +5,52 @@ const API_BASE_URL =
 export async function analyzeSymptoms(data) {
   const url = `${API_BASE_URL}/api/analyze`;
 
-  console.log("API URL:", url);
-  console.log("DATA:", data);
+  console.log("Calling API:", url);
+  console.log("Sending data:", data);
 
   try {
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(data),
     });
 
-    console.log("Backend status:", response.status);
+    console.log("API Status:", response.status);
 
-    const result = await response.json();
+    const contentType = response.headers.get("content-type");
 
-    console.log("Backend response:", result);
+    let result;
+
+    if (contentType && contentType.includes("application/json")) {
+      result = await response.json();
+    } else {
+      const text = await response.text();
+      result = {
+        detail: text || "Backend returned an empty response.",
+      };
+    }
 
     if (!response.ok) {
       throw new Error(
-        result?.detail || `Backend error: ${response.status}`
+        result?.detail ||
+        result?.message ||
+        `Backend error: ${response.status}`
       );
     }
 
     return result;
   } catch (error) {
     console.error("AI Analysis Error:", error);
+
+    if (error instanceof TypeError) {
+      throw new Error(
+        "Unable to connect to the AI server. Please check the backend deployment."
+      );
+    }
+
     throw error;
   }
 }
