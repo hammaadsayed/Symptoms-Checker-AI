@@ -1,0 +1,886 @@
+/* =========================================
+   RESULTS PAGE
+========================================= */
+
+.results-page {
+  min-height: 100vh;
+  background: #f5fbfa;
+  color: #173b3a;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.results-hero {
+  padding: 60px 20px 45px;
+  background: linear-gradient(
+    135deg,
+    #e9faf7 0%,
+    #f6fffd 50%,
+    #edf9f7 100%
+  );
+  border-bottom: 1px solid #dcefeb;
+}
+
+.results-hero-content {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.results-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: #dff7f1;
+  color: #087f72;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.results-hero h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #123b39;
+}
+
+.results-hero p {
+  max-width: 700px;
+  margin: 16px auto 0;
+  color: #607775;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.results-container {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.result-card {
+  background: #ffffff;
+  border: 1px solid #e0eeeb;
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(30, 100, 90, 0.05);
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.result-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #e7f8f4;
+  font-size: 21px;
+}
+
+.result-card-header h2 {
+  margin: 0;
+  color: #163d3a;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.result-card-header p {
+  margin: 4px 0 0;
+  color: #718481;
+  font-size: 13px;
+}
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.patient-result-grid,
+.details-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.result-info-box {
+  padding: 17px 18px;
+  border: 1px solid #e1eeeb;
+  background: #f9fcfb;
+  border-radius: 12px;
+}
+
+.result-info-box span {
+  display: block;
+  margin-bottom: 7px;
+  color: #718481;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.result-info-box strong {
+  display: block;
+  color: #194643;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================================
+   SYMPTOMS
+========================================= */
+
+.result-symptoms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result-symptom-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #e9f8f5;
+  border: 1px solid #ccece5;
+  color: #087c70;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.no-data {
+  margin: 0;
+  color: #899895;
+  font-size: 14px;
+}
+
+/* =========================================
+   SEVERITY
+========================================= */
+
+.severity-mild {
+  color: #27875f !important;
+}
+
+.severity-moderate {
+  color: #b27618 !important;
+}
+
+.severity-severe {
+  color: #c24a4a !important;
+}
+
+/* =========================================
+   ADDITIONAL INFORMATION
+========================================= */
+
+.additional-result-box {
+  padding: 18px;
+  background: #f9fcfb;
+  border: 1px solid #e1eeeb;
+  border-radius: 12px;
+}
+
+.additional-result-box p {
+  margin: 0;
+  color: #536c68;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* =========================================
+   AI CARD
+========================================= */
+
+.ai-result-card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  margin: 25px 0 20px;
+  border: 1px solid #bfe8df;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #e9faf6 0%,
+    #f5fffd 100%
+  );
+}
+
+.ai-result-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #d4f3ec;
+  font-size: 24px;
+}
+
+.ai-result-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ai-label {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #078071;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ai-result-content h2 {
+  margin: 0;
+  color: #16433f;
+  font-size: 21px;
+}
+
+.ai-result-content p {
+  margin: 10px 0 15px;
+  color: #5f7773;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ai-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #087b6f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a085;
+}
+
+/* =========================================
+   AI ANALYSIS SECTION
+========================================= */
+
+.ai-summary-card {
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.ai-summary-text {
+  margin: 0;
+  color: #374151;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* =========================================
+   POSSIBLE EXPLANATIONS
+========================================= */
+
+.possible-explanations {
+  display: grid;
+  gap: 16px;
+}
+
+.explanation-item {
+  padding: 20px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.explanation-item:hover {
+  transform: translateY(-2px);
+  border-color: #cce8e2;
+  box-shadow: 0 8px 20px rgba(30, 100, 90, 0.06);
+}
+
+.explanation-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.explanation-item p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* =========================================
+   GENERAL GUIDANCE
+========================================= */
+
+.guidance-list,
+.warning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.guidance-list li,
+.warning-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.guidance-list li > span {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.guidance-list p,
+.warning-list p {
+  margin: 0;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* =========================================
+   WARNING SIGNS
+========================================= */
+
+.warning-card {
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.warning-list li {
+  background: #fff7f7;
+}
+
+.warning-list li > span {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* =========================================
+   MEDICAL CARE
+========================================= */
+
+.care-card {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.care-card > p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* =========================================
+   DISCLAIMER
+========================================= */
+
+.results-disclaimer {
+  padding: 16px 18px;
+  margin: 20px 0;
+  border: 1px solid #e5e9e8;
+  border-radius: 12px;
+  background: #fafcfc;
+  color: #697a77;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.results-disclaimer strong {
+  color: #455b57;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.results-primary-btn,
+.results-secondary-btn {
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.results-primary-btn {
+  border: 1px solid #087f72;
+  background: #087f72;
+  color: #ffffff;
+}
+
+.results-primary-btn:hover {
+  background: #066e63;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(8, 127, 114, 0.18);
+}
+
+.results-secondary-btn {
+  border: 1px solid #c9dfdb;
+  background: #ffffff;
+  color: #28625d;
+}
+
+.results-secondary-btn:hover {
+  background: #eef9f7;
+  border-color: #a9d5ce;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 100, 90, 0.08);
+}
+
+.results-primary-btn:active,
+.results-secondary-btn:active {
+  transform: translateY(0);
+}
+
+.results-primary-btn:focus-visible,
+.results-secondary-btn:focus-visible {
+  outline: 3px solid rgba(8, 127, 114, 0.2);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   AI ERROR CARD
+========================================= */
+
+.ai-error-card {
+  border: 1px solid #f0d7d7;
+  background: #ffffff;
+}
+
+.ai-error-card .results-empty {
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.ai-error-card .empty-icon {
+  margin-bottom: 15px;
+}
+
+.ai-error-card h1 {
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+
+.ai-error-card p {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+/* =========================================
+   EMPTY RESULTS STATE
+========================================= */
+
+.results-empty {
+  width: min(600px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.results-empty h1 {
+  margin: 0 0 10px;
+  color: #173d3a;
+  font-size: 30px;
+}
+
+.results-empty p {
+  margin: 0 auto 25px;
+  color: #6b7d79;
+  line-height: 1.6;
+}
+
+/* =========================================
+   AI PLACEHOLDER
+========================================= */
+
+.ai-placeholder {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.ai-placeholder > span {
+  font-size: 2.5rem;
+}
+
+.ai-placeholder h2 {
+  margin: 12px 0 8px;
+  color: #111827;
+}
+
+.ai-placeholder p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* =========================================
+   RESULT DISCLAIMER
+========================================= */
+
+.result-disclaimer {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin-top: 24px;
+}
+
+.disclaimer-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.result-disclaimer h3 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.result-disclaimer p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+  .results-hero {
+    padding: 45px 18px 35px;
+  }
+
+  .results-container {
+    width: min(100% - 24px, 1000px);
+    padding-top: 25px;
+  }
+
+  .result-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .patient-result-grid,
+  .details-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-result-card {
+    padding: 21px;
+    gap: 14px;
+  }
+
+  .ai-result-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .results-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .results-primary-btn,
+  .results-secondary-btn {
+    width: 100%;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .error-actions .results-primary-btn,
+  .error-actions .results-secondary-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .results-hero {
+    padding: 40px 16px 30px;
+  }
+
+  .results-badge {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .results-hero h1 {
+    font-size: 30px;
+  }
+
+  .results-hero p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .results-container {
+    width: calc(100% - 20px);
+    padding-top: 20px;
+    padding-bottom: 45px;
+  }
+
+  .result-card {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .result-card-header {
+    gap: 11px;
+    margin-bottom: 18px;
+  }
+
+  .result-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .result-card-header h2 {
+    font-size: 18px;
+  }
+
+  .result-card-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .result-info-box {
+    padding: 14px;
+  }
+
+  .result-info-box strong {
+    font-size: 14px;
+  }
+
+  .result-symptom-chip {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .ai-result-card {
+    flex-direction: column;
+    padding: 19px;
+  }
+
+  .ai-result-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ai-result-content h2 {
+    font-size: 19px;
+  }
+
+  .ai-result-content p {
+    font-size: 13px;
+  }
+
+  .ai-status {
+    font-size: 12px;
+  }
+
+  .explanation-item {
+    padding: 16px;
+  }
+
+  .explanation-item h3 {
+    font-size: 15px;
+  }
+
+  .explanation-item p {
+    font-size: 13px;
+  }
+
+  .guidance-list li,
+  .warning-list li {
+    padding: 13px;
+  }
+
+  .guidance-list p,
+  .warning-list p {
+    font-size: 13px;
+  }
+
+  .results-disclaimer {
+    padding: 14px;
+    font-size: 11px;
+  }
+
+  .result-disclaimer {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .result-disclaimer p {
+    font-size: 13px;
+  }
+
+  .ai-error-card .results-empty {
+    padding: 35px 15px;
+  }
+
+  .ai-error-card h1 {
+    font-size: 22px;
+  }
+
+  .ai-error-card p {
+    font-size: 13px;
+  }
+
+  .error-actions {
+    margin-top: 20px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+  .results-hero h1 {
+    font-size: 27px;
+  }
+
+  .results-container {
+    width: calc(100% - 14px);
+  }
+
+  .result-card {
+    padding: 15px;
+  }
+
+  .result-card-header {
+    gap: 9px;
+  }
+
+  .result-icon {
+    width: 39px;
+    height: 39px;
+    font-size: 17px;
+  }
+
+  .result-card-header h2 {
+    font-size: 16px;
+  }
+
+  .result-card-header p {
+    font-size: 11px;
+  }
+
+  .results-primary-btn,
+  .results-secondary-btn {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .results-primary-btn,
+  .results-secondary-btn,
+  .explanation-item {
+    transition: none;
+  }
+
+  .results-primary-btn:hover,
+  .results-secondary-btn:hover,
+  .explanation-item:hover {
+    transform: none;
+  }
+}

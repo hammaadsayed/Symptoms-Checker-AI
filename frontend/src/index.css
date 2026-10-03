@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  background: #f7fbfa !important;
+  color: #14201d !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* =========================================
+   SYMPTOMS CHECKER AI
+   GLOBAL CSS
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+/* =========================================
+   RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #14201d;
+  background: #f7fbfa;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: #bceee3;
+  color: #123c35;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf7f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #82cbbb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #42ad96;
+}
+
+/* =========================================
+   COMMON CONTAINER
+========================================= */
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.section-header {
+  width: 100%;
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 14px;
+  padding: 7px 13px;
+
+  border: 1px solid #cce9e2;
+  border-radius: 50px;
+
+  background: #e8f8f4;
+  color: #168c75;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-bottom: 16px;
+
+  color: #15312a;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.section-description {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #687b75;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================
+   COMMON BUTTON
+========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 46px;
+  padding: 0 20px;
+
+  border-radius: 11px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #19a889;
+  color: #ffffff;
+
+  box-shadow: 0 8px 22px rgba(25, 168, 137, 0.2);
+}
+
+.btn-primary:hover {
+  background: #128f76;
+  box-shadow: 0 12px 28px rgba(25, 168, 137, 0.25);
+}
+
+.btn-secondary {
+  border: 1px solid #cfe5df;
+  background: #ffffff;
+  color: #24564c;
+}
+
+.btn-secondary:hover {
+  background: #f1faf7;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 32px, 680px);
+  }
+
+  .section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .section-header {
+    margin-bottom: 38px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+}
